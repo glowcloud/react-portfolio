@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
     <Box width="100%" height="100vh" display="flex" flexDirection="column">
       <Header setIsSidebarOpen={setIsSidebarOpen} />
       <Sidebar isOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
-      <Box width="100%" py="5rem" px="10rem">
+      <Box width="100%" py="5rem" px={{ md: "10rem", sm: "1rem", xs: 2 }}>
         <Offset />
         {children}
       </Box>

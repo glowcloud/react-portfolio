@@ -9,6 +9,10 @@ const AboutMe = () => {
       justifyContent="center"
       alignItems="center"
       my={5}
+      id="about"
+      sx={{
+        scrollMarginTop: 100,
+      }}
     >
       <Typography
         gutterBottom
@@ -19,7 +23,7 @@ const AboutMe = () => {
       </Typography>
       <Typography gutterBottom fontSize={20} px={5} textAlign="center">
         I'm a software developer with a Master's degree in Computer Engineering.
-        In my free time I enjoy video games, drawing and reading. I speak fluent
+        In my free time I enjoy playing video games, drawing and reading. I speak fluent
         Polish and English.
       </Typography>
     </Box>

@@ -31,6 +31,8 @@ const Contact = () => {
       justifyContent="center"
       alignItems="center"
       my={5}
+      mx={{md: 10, sm: 0}}
+      id="contact"
     >
       <Typography
         gutterBottom
@@ -70,7 +72,7 @@ const Contact = () => {
             rows={10}
             name="message"
           />
-          <Button onClick={onSubmit} variant="outlined" sx={{ my: 1 }}>
+          <Button onClick={onSubmit} variant="outlined" size="large" sx={{ my: 1 }}>
             Send
           </Button>
         </form>

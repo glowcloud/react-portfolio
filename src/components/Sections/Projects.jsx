@@ -21,6 +21,10 @@ const Projects = () => {
       justifyContent="center"
       spacing={2}
       my={5}
+      id="projects"
+      sx={{
+        scrollMarginTop: 90,
+      }}
     >
       <Grid item xs={12}>
         <Typography
@@ -32,7 +36,7 @@ const Projects = () => {
         </Typography>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={4}>
+      <Grid item sm={12} md={6}>
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >
@@ -54,7 +58,7 @@ const Projects = () => {
         </CardActionArea>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={4}>
+      <Grid item sm={12} md={6}>
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >
@@ -76,7 +80,7 @@ const Projects = () => {
         </CardActionArea>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={4}>
+      <Grid item sm={12} md={6}>
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >
@@ -98,7 +102,7 @@ const Projects = () => {
         </CardActionArea>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={4}>
+      <Grid item sm={12} md={6}>
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >

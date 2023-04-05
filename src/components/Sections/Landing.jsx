@@ -9,6 +9,10 @@ const Landing = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      id="home"
+      sx={{
+        scrollMarginTop: 75,
+      }}
     >
       <Typography
         variant="h1"

@@ -17,6 +17,10 @@ const Skills = () => {
       justifyContent="center"
       my={5}
       spacing={2}
+      id="skills"
+      sx={{
+        scrollMarginTop: 100,
+      }}
     >
       <Grid item xs={12}>
         <Typography
@@ -28,7 +32,7 @@ const Skills = () => {
         </Typography>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <Card
           sx={{
             display: "flex",
@@ -62,7 +66,7 @@ const Skills = () => {
         </Card>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <Card
           sx={{
             display: "flex",
@@ -93,7 +97,7 @@ const Skills = () => {
         </Card>
       </Grid>
 
-      <Grid item sm={12} md={6} lg={3}>
+      <Grid item xs={12} sm={12} md={6} lg={3}>
         <Card
           sx={{
             display: "flex",

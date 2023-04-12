@@ -10,7 +10,7 @@ import { Menu } from "@mui/icons-material";
 
 const Header = ({ setIsSidebarOpen }) => {
   return (
-    <AppBar sx={{ backgroundColor: "#323d49" }}>
+    <AppBar position="fixed" sx={{ backgroundColor: "#323d49", top: -1 }}>
       <Toolbar>
         <IconButton
           size="large"

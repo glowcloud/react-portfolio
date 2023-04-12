@@ -11,7 +11,7 @@ const AboutMe = () => {
       my={5}
       id="about"
       sx={{
-        scrollMarginTop: 100,
+        scrollMarginTop: 90,
       }}
     >
       <Typography

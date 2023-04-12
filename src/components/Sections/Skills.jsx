@@ -19,7 +19,7 @@ const Skills = () => {
       spacing={2}
       id="skills"
       sx={{
-        scrollMarginTop: 100,
+        scrollMarginTop: 90,
       }}
     >
       <Grid item xs={12}>
@@ -32,7 +32,7 @@ const Skills = () => {
         </Typography>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={6} lg={3}>
+      <Grid item xs={12} sm={12} md={6} lg={4}>
         <Card
           sx={{
             display: "flex",
@@ -66,7 +66,7 @@ const Skills = () => {
         </Card>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={6} lg={3}>
+      <Grid item xs={12} sm={12} md={6} lg={4}>
         <Card
           sx={{
             display: "flex",
@@ -97,7 +97,7 @@ const Skills = () => {
         </Card>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={6} lg={3}>
+      <Grid item xs={12} sm={12} md={6} lg={4}>
         <Card
           sx={{
             display: "flex",

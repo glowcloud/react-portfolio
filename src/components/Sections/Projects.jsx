@@ -36,7 +36,7 @@ const Projects = () => {
         </Typography>
       </Grid>
 
-      <Grid item sm={12} md={6}>
+      <Grid item sm={12} md={6} width="100%">
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >
@@ -58,7 +58,7 @@ const Projects = () => {
         </CardActionArea>
       </Grid>
 
-      <Grid item sm={12} md={6}>
+      <Grid item sm={12} md={6} width="100%">
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >
@@ -80,7 +80,7 @@ const Projects = () => {
         </CardActionArea>
       </Grid>
 
-      <Grid item sm={12} md={6}>
+      <Grid item sm={12} md={6} width="100%">
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >
@@ -102,7 +102,7 @@ const Projects = () => {
         </CardActionArea>
       </Grid>
 
-      <Grid item sm={12} md={6}>
+      <Grid item sm={12} md={6} width="100%">
         <CardActionArea
           onClick={() => window.open("https://elden-ring-companion.vercel.app")}
         >

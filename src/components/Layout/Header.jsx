@@ -38,6 +38,16 @@ const Header = ({ setIsSidebarOpen }) => {
             href="#home"
             underline="hover"
             mx={1}
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                color: "#7f53ac",
+                backgroundImage:
+                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              },
+            }}
           >
             Home
           </Typography>
@@ -47,6 +57,16 @@ const Header = ({ setIsSidebarOpen }) => {
             href="#about"
             underline="hover"
             mx={1}
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                color: "#7f53ac",
+                backgroundImage:
+                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              },
+            }}
           >
             About
           </Typography>
@@ -56,6 +76,16 @@ const Header = ({ setIsSidebarOpen }) => {
             href="#skills"
             underline="hover"
             mx={1}
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                color: "#7f53ac",
+                backgroundImage:
+                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              },
+            }}
           >
             Skills
           </Typography>
@@ -65,6 +95,16 @@ const Header = ({ setIsSidebarOpen }) => {
             href="#projects"
             underline="hover"
             mx={1}
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                color: "#7f53ac",
+                backgroundImage:
+                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              },
+            }}
           >
             Projects
           </Typography>
@@ -74,6 +114,16 @@ const Header = ({ setIsSidebarOpen }) => {
             href="#contact"
             underline="hover"
             mx={1}
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                color: "#7f53ac",
+                backgroundImage:
+                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              },
+            }}
           >
             Contact
           </Typography>

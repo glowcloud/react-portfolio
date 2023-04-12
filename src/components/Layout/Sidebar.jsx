@@ -7,12 +7,21 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Link
+  Link,
 } from "@mui/material";
 
 const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
   return (
-    <Drawer anchor="left" open={isOpen} onClose={() => setIsSidebarOpen(false)}>
+    <Drawer
+      anchor="left"
+      open={isOpen}
+      onClose={() => setIsSidebarOpen(false)}
+      sx={{
+        "& .MuiDrawer-paper": {
+          width: "200px",
+        },
+      }}
+    >
       <Box w={250} onClick={() => setIsSidebarOpen(false)}>
         <List>
           <ListItem disablePadding>

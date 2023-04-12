@@ -9,7 +9,6 @@ import {
   Alert,
 } from "@mui/material";
 import emailjs from "@emailjs/browser";
-import isEmail from "validator/lib/isemail";
 
 const Contact = () => {
   const formRef = useRef();
@@ -22,6 +21,11 @@ const Contact = () => {
   const [resultMsg, setResultMsg] = useState("");
   const [isSnackbar, setIsSnackbar] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const isEmail = (email) => {
+    const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return pattern.test(email);
+  };
 
   const onSubmit = async () => {
     if (

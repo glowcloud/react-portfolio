@@ -6,7 +6,7 @@ function App() {
     palette: {
       type: "dark",
       primary: {
-        main: "#7f53ac",
+        main: "#647dee",
       },
       secondary: {
         main: "#f4c430",

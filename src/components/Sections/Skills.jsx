@@ -39,6 +39,10 @@ const Skills = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             height: "100%",
+            "&:hover": {
+              backgroundColor: "#647dee",
+              WebkitTransition: "background-color 0.3s linear",
+            },
           }}
         >
           <CardContent>
@@ -73,6 +77,10 @@ const Skills = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             height: "100%",
+            "&:hover": {
+              backgroundColor: "#647dee",
+              WebkitTransition: "background-color 0.3s linear",
+            },
           }}
         >
           <CardContent>
@@ -104,6 +112,10 @@ const Skills = () => {
             flexDirection: "column",
             justifyContent: "space-between",
             height: "100%",
+            "&:hover": {
+              backgroundColor: "#647dee",
+              WebkitTransition: "background-color 0.3s linear",
+            },
           }}
         >
           <CardContent>

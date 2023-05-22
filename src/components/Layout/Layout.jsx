@@ -1,15 +1,9 @@
 import { useState } from "react";
-import { styled } from "@mui/system";
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
-
-const Offset = styled("div")(({ theme }) => ({
-  ...theme.mixins.toolbar,
-  padding: "1rem",
-}));
 
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -23,7 +17,7 @@ const Layout = ({ children }) => {
         pt="5rem"
         px={{ xl: "25rem", md: "10rem", sm: "1rem", xs: 2 }}
       >
-        <Offset />
+        <Toolbar />
         {children}
       </Box>
       <Footer />

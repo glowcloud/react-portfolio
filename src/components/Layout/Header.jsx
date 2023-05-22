@@ -37,7 +37,7 @@ const Header = ({ setIsSidebarOpen }) => {
             component={Link}
             href="#home"
             underline="hover"
-            mx={1}
+            mx={2}
             sx={{
               color: "text.primary",
               "&:hover": {
@@ -56,7 +56,7 @@ const Header = ({ setIsSidebarOpen }) => {
             component={Link}
             href="#about"
             underline="hover"
-            mx={1}
+            mx={2}
             sx={{
               color: "text.primary",
               "&:hover": {
@@ -75,7 +75,7 @@ const Header = ({ setIsSidebarOpen }) => {
             component={Link}
             href="#skills"
             underline="hover"
-            mx={1}
+            mx={2}
             sx={{
               color: "text.primary",
               "&:hover": {
@@ -94,7 +94,7 @@ const Header = ({ setIsSidebarOpen }) => {
             component={Link}
             href="#projects"
             underline="hover"
-            mx={1}
+            mx={2}
             sx={{
               color: "text.primary",
               "&:hover": {
@@ -113,7 +113,7 @@ const Header = ({ setIsSidebarOpen }) => {
             component={Link}
             href="#contact"
             underline="hover"
-            mx={1}
+            mx={2}
             sx={{
               color: "text.primary",
               "&:hover": {

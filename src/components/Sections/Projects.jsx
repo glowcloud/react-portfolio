@@ -3,23 +3,19 @@ import {
   Grid,
   Card,
   CardContent,
-  List,
-  ListItem,
   CardMedia,
-  CardActionArea,
   Link,
   CardActions,
   IconButton,
-  SvgIcon,
-  Box,
 } from "@mui/material";
 import { GitHub, Link as LinkIcon } from "@mui/icons-material";
 
 import project0Img from "../../assets/project-0-elden-ring.png";
+import project1Img from "../../assets/project-1-knight-tech.png";
+import project2Img from "../../assets/project-2-photo-portfolio.png";
+import project3Img from "../../assets/project-3-easy-polls.png";
 
 const Projects = () => {
-  // elden ring, game database, photo gallery,
-  // recipes, ecommerce
   return (
     <Grid
       component="section"
@@ -44,10 +40,148 @@ const Projects = () => {
         </Typography>
       </Grid>
 
+      {/* COMPANY WEBSITE */}
       <Grid item sm={12} md={6} width="100%">
-        {/* <CardActionArea
-          onClick={() => window.open("https://elden-ring-companion.vercel.app")}
-        > */}
+        <Card
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            height: "100%",
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={project1Img}
+            alt="Company Website Project Snapshot Image"
+            sx={{
+              objectFit: "contain",
+              height: "100%",
+            }}
+          />
+          <CardContent
+            sx={{
+              pb: 1,
+            }}
+          >
+            <Typography gutterBottom variant="h6" textAlign="center">
+              Knight Tech Company Website
+            </Typography>
+            <Typography gutterBottom sx={{ textAlign: "justify" }}>
+              An example of a simple website for a company, showcasing
+              information about its goals, founders, career possibilities,
+              reviews, FAQ and containing an example contact form.
+            </Typography>
+            <Typography
+              gutterBottom
+              component="span"
+              sx={{ textAlign: "justify" }}
+            >
+              Created with React and Material UI.
+            </Typography>
+          </CardContent>
+          <CardActions
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              pt: 0,
+            }}
+          >
+            <IconButton
+              color="primary"
+              size="large"
+              onClick={() =>
+                window.open("https://github.com/glowcloud/company-site")
+              }
+            >
+              <GitHub fontSize="inherit" />
+            </IconButton>
+            <IconButton
+              color="primary"
+              size="large"
+              onClick={() =>
+                window.open("https://company-site-two-alpha.vercel.app")
+              }
+            >
+              <LinkIcon fontSize="inherit" />
+            </IconButton>
+          </CardActions>
+        </Card>
+      </Grid>
+
+      {/* PHOTOGRAPHY PORTFOLIO */}
+      <Grid item sm={12} md={6} width="100%">
+        <Card
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            height: "100%",
+          }}
+        >
+          <CardMedia
+            component="img"
+            image={project2Img}
+            alt="Photography Portfolio Project Snapshot Image"
+            sx={{
+              objectFit: "contain",
+              height: "100%",
+            }}
+          />
+          <CardContent
+            sx={{
+              pb: 1,
+            }}
+          >
+            <Typography gutterBottom variant="h6" textAlign="center">
+              Photography Portfolio
+            </Typography>
+            <Typography gutterBottom sx={{ textAlign: "justify" }}>
+              A simple photography portfolio website, containing photo
+              galleries, photo viewer, information about the photographer and
+              their services, and an example contact form.
+            </Typography>
+            <Typography
+              gutterBottom
+              component="span"
+              sx={{ textAlign: "justify" }}
+            >
+              Created with React and Material UI.
+            </Typography>
+          </CardContent>
+          <CardActions
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              pt: 0,
+            }}
+          >
+            <IconButton
+              color="primary"
+              size="large"
+              onClick={() =>
+                window.open("https://github.com/glowcloud/photo-portfolio")
+              }
+            >
+              <GitHub fontSize="inherit" />
+            </IconButton>
+            <IconButton
+              color="primary"
+              size="large"
+              onClick={() =>
+                window.open("https://photo-portfolio-mu.vercel.app")
+              }
+            >
+              <LinkIcon fontSize="inherit" />
+            </IconButton>
+          </CardActions>
+        </Card>
+      </Grid>
+
+      {/* ELDEN RING WEBSITE */}
+      <Grid item sm={12} md={6} width="100%">
         <Card
           sx={{
             display: "flex",
@@ -140,82 +274,73 @@ const Projects = () => {
         </Card>
       </Grid>
 
+      {/* SURVEYS / POLLS */}
       <Grid item sm={12} md={6} width="100%">
-        <CardActionArea
-          onClick={() => window.open("https://elden-ring-companion.vercel.app")}
+        <Card
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            height: "100%",
+          }}
         >
-          <Card
+          <CardMedia
+            component="img"
+            image={project3Img}
+            alt="Easy Polls Project Snapshot Image"
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
+              objectFit: "contain",
               height: "100%",
-              "&:hover": {
-                backgroundColor: "#647dee",
-                WebkitTransition: "background-color 0.3s linear",
-              },
+            }}
+          />
+          <CardContent
+            sx={{
+              pb: 1,
             }}
           >
-            {/* <CardMedia></CardMedia> */}
-            <CardContent>
-              <Typography variant="h6" textAlign="center">
-                Video Game Database
-              </Typography>
-            </CardContent>
-          </Card>
-        </CardActionArea>
-      </Grid>
-
-      <Grid item sm={12} md={6} width="100%">
-        <CardActionArea
-          onClick={() => window.open("https://elden-ring-companion.vercel.app")}
-        >
-          <Card
+            <Typography gutterBottom variant="h6" textAlign="center">
+              Easy Polls
+            </Typography>
+            <Typography gutterBottom sx={{ textAlign: "justify" }}>
+              A website for creating and answering polls, and viewing their
+              results, with a simple signup and login (non-secure, to showcase
+              different functionalities).
+            </Typography>
+            <Typography
+              gutterBottom
+              component="span"
+              sx={{ textAlign: "justify" }}
+            >
+              Created with React and Material UI. Uses Firebase for storing data
+              and Nivo for showcasing the results of polls as charts.
+            </Typography>
+          </CardContent>
+          <CardActions
             sx={{
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              height: "100%",
-              "&:hover": {
-                backgroundColor: "#647dee",
-                WebkitTransition: "background-color 0.3s linear",
-              },
+              justifyContent: "center",
+              alignItems: "center",
+              pt: 0,
             }}
           >
-            {/* <CardMedia></CardMedia> */}
-            <CardContent>
-              <Typography variant="h6" textAlign="center">
-                Photo Gallery
-              </Typography>
-            </CardContent>
-          </Card>
-        </CardActionArea>
-      </Grid>
-
-      <Grid item sm={12} md={6} width="100%">
-        <CardActionArea
-          onClick={() => window.open("https://elden-ring-companion.vercel.app")}
-        >
-          <Card
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              height: "100%",
-              "&:hover": {
-                backgroundColor: "#647dee",
-                WebkitTransition: "background-color 0.3s linear",
-              },
-            }}
-          >
-            {/* <CardMedia></CardMedia> */}
-            <CardContent>
-              <Typography variant="h6" textAlign="center">
-                E-commerce Website
-              </Typography>
-            </CardContent>
-          </Card>
-        </CardActionArea>
+            <IconButton
+              color="primary"
+              size="large"
+              onClick={() =>
+                window.open("https://github.com/glowcloud/polls-site")
+              }
+            >
+              <GitHub fontSize="inherit" />
+            </IconButton>
+            <IconButton
+              color="primary"
+              size="large"
+              onClick={() => window.open("https://easy-polls.vercel.app")}
+            >
+              <LinkIcon fontSize="inherit" />
+            </IconButton>
+          </CardActions>
+        </Card>
       </Grid>
     </Grid>
   );

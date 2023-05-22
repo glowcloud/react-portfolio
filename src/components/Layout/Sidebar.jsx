@@ -1,13 +1,12 @@
 import {
   Box,
-  Divider,
   Drawer,
   List,
   ListItem,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
   Link,
+  Toolbar,
 } from "@mui/material";
 
 const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
@@ -22,6 +21,7 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
         },
       }}
     >
+      <Toolbar />
       <Box w={250} onClick={() => setIsSidebarOpen(false)}>
         <List>
           <ListItem disablePadding>
@@ -50,7 +50,6 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
             </ListItemButton>
           </ListItem>
         </List>
-        <Divider />
       </Box>
     </Drawer>
   );

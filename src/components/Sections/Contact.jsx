@@ -78,9 +78,12 @@ const Contact = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      my={5}
+      my={9}
       mx={{ md: 10, sm: 0 }}
       id="contact"
+      sx={{
+        scrollMarginTop: 105,
+      }}
     >
       <Typography
         gutterBottom
@@ -89,14 +92,8 @@ const Contact = () => {
       >
         Contact Me
       </Typography>
-      <Box
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        width="100%"
-      >
-        <form ref={formRef} style={{ width: "100%" }} autoComplete="off">
+      <Box width="100%">
+        <form ref={formRef} autoComplete="off">
           <TextField
             label="Name"
             sx={{ label: { color: "text.primary" }, my: 1 }}

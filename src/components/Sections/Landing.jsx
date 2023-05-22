@@ -10,6 +10,7 @@ const Landing = () => {
       justifyContent="center"
       alignItems="center"
       id="home"
+      py={2}
       sx={{
         scrollMarginTop: 75,
       }}

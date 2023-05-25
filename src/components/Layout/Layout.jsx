@@ -8,14 +8,26 @@ import Footer from "./Footer";
 const Layout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const navItems = [
+    { text: "Home", href: "#home" },
+    { text: "About", href: "#about" },
+    { text: "Skills", href: "#skills" },
+    { text: "Projects", href: "#projects" },
+    { text: "Contact", href: "#contact" },
+  ];
+
   return (
     <Box width="100%" height="100vh" display="flex" flexDirection="column">
-      <Header setIsSidebarOpen={setIsSidebarOpen} />
-      <Sidebar isOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
+      <Header navItems={navItems} setIsSidebarOpen={setIsSidebarOpen} />
+      <Sidebar
+        navItems={navItems}
+        isOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
+      />
       <Box
         width="100%"
         pt="5rem"
-        px={{ xl: "25rem", md: "10rem", sm: "1rem", xs: 2 }}
+        px={{ xl: "20rem", md: "10rem", sm: "1rem", xs: 2 }}
       >
         <Toolbar />
         {children}

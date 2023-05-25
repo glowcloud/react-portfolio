@@ -28,9 +28,8 @@ const Landing = () => {
       >
         Hi, I'm Oliwia
       </Typography>
+
       <Box
-        // component="img"
-        // src={avatarImg}
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -47,18 +46,6 @@ const Landing = () => {
             zIndex: -2,
             position: "absolute",
           },
-          // "&::after": {
-          //   content: '""',
-          //   display: "inline-block",
-          //   width: 240,
-          //   height: 240,
-          //   border: "5px solid red",
-          //   borderImage: "linear-gradient(315deg, #7f53ac 0%, #647dee 74%) 27 / 5px" ,
-          //   borderRadius: "50%",
-          //   opacity: 0.8,
-          //   zIndex: 1,
-          //   position: "absolute",
-          // },
         }}
       >
         <img
@@ -67,6 +54,7 @@ const Landing = () => {
           style={{ maxHeight: "250px", objectFit: "contain" }}
         />
       </Box>
+
       <Typography
         variant="h3"
         sx={{

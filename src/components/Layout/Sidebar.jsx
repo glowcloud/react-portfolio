@@ -9,7 +9,7 @@ import {
   Toolbar,
 } from "@mui/material";
 
-const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
+const Sidebar = ({ navItems, isOpen, setIsSidebarOpen }) => {
   return (
     <Drawer
       anchor="left"
@@ -24,31 +24,13 @@ const Sidebar = ({ isOpen, setIsSidebarOpen }) => {
       <Toolbar />
       <Box w={250} onClick={() => setIsSidebarOpen(false)}>
         <List>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} href="#home">
-              <ListItemText primary="Home" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} href="#about">
-              <ListItemText primary="About" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} href="#skills">
-              <ListItemText primary="Skills" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} href="#projects">
-              <ListItemText primary="Projects" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component={Link} href="#contact">
-              <ListItemText primary="Contact" />
-            </ListItemButton>
-          </ListItem>
+          {navItems.map((item) => (
+            <ListItem key={item.text} disablePadding>
+              <ListItemButton component={Link} href={item.href}>
+                <ListItemText primary={item.text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
         </List>
       </Box>
     </Drawer>

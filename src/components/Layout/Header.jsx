@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 
-const Header = ({ setIsSidebarOpen }) => {
+const Header = ({ navItems, setIsSidebarOpen }) => {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "#323d49", top: -1 }}>
       <Toolbar>
@@ -32,101 +32,28 @@ const Header = ({ setIsSidebarOpen }) => {
           width="100%"
           sx={{ mr: 2, visibility: { xs: "hidden", md: "visible" } }}
         >
-          <Typography
-            variant="h6"
-            component={Link}
-            href="#home"
-            underline="hover"
-            mx={2}
-            sx={{
-              color: "text.primary",
-              "&:hover": {
-                color: "#7f53ac",
-                backgroundImage:
-                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              },
-            }}
-          >
-            Home
-          </Typography>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="#about"
-            underline="hover"
-            mx={2}
-            sx={{
-              color: "text.primary",
-              "&:hover": {
-                color: "#7f53ac",
-                backgroundImage:
-                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              },
-            }}
-          >
-            About
-          </Typography>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="#skills"
-            underline="hover"
-            mx={2}
-            sx={{
-              color: "text.primary",
-              "&:hover": {
-                color: "#7f53ac",
-                backgroundImage:
-                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              },
-            }}
-          >
-            Skills
-          </Typography>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="#projects"
-            underline="hover"
-            mx={2}
-            sx={{
-              color: "text.primary",
-              "&:hover": {
-                color: "#7f53ac",
-                backgroundImage:
-                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              },
-            }}
-          >
-            Projects
-          </Typography>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="#contact"
-            underline="hover"
-            mx={2}
-            sx={{
-              color: "text.primary",
-              "&:hover": {
-                color: "#7f53ac",
-                backgroundImage:
-                  "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              },
-            }}
-          >
-            Contact
-          </Typography>
+          {navItems.map((item) => (
+            <Typography
+              key={item.text}
+              variant="h6"
+              component={Link}
+              href={item.href}
+              underline="hover"
+              mx={2}
+              sx={{
+                color: "text.primary",
+                "&:hover": {
+                  color: "#7f53ac",
+                  backgroundImage:
+                    "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                },
+              }}
+            >
+              {item.text}
+            </Typography>
+          ))}
         </Box>
       </Toolbar>
     </AppBar>

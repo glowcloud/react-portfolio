@@ -33,7 +33,7 @@ const ProjectCard = ({
           alt={`${title} Snapshot Image`}
           sx={{
             objectFit: "contain",
-            height: "100%",
+            // height: "100%",
           }}
         />
         <CardContent

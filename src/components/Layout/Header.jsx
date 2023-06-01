@@ -5,11 +5,14 @@ import {
   IconButton,
   Box,
   Link,
+  useMediaQuery,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import { motion } from "framer-motion";
 
 const Header = ({ navItems, setIsSidebarOpen }) => {
+  const isHover = useMediaQuery("(hover: hover)");
+
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "#323d49", top: -1 }}>
       <Toolbar>
@@ -37,8 +40,25 @@ const Header = ({ navItems, setIsSidebarOpen }) => {
             <Box
               key={item.text}
               component={motion.div}
-              initial={{ scale: 1 }}
-              whileHover={{ scale: 1.15 }}
+              initial={{
+                scale: 1,
+                backgroundImage:
+                  "linear-gradient(0deg, #323d49 0%, #323d49 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "unset",
+              }}
+              whileHover={
+                isHover
+                  ? {
+                      scale: 1.15,
+                      color: "#7f53ac",
+                      backgroundImage:
+                        "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }
+                  : {}
+              }
               whileTap={{ scale: 0.9 }}
               mx={2}
             >
@@ -50,11 +70,7 @@ const Header = ({ navItems, setIsSidebarOpen }) => {
                 sx={{
                   color: "text.primary",
                   "&:hover": {
-                    color: "#7f53ac",
-                    backgroundImage:
-                      "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    textDecoration: "none",
                   },
                 }}
               >

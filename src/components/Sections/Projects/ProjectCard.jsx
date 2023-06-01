@@ -6,6 +6,7 @@ import {
   CardMedia,
   CardActions,
   IconButton,
+  useMediaQuery,
 } from "@mui/material";
 import { GitHub, Link as LinkIcon } from "@mui/icons-material";
 import { motion } from "framer-motion";
@@ -18,6 +19,8 @@ const ProjectCard = ({
   gitLink,
   webLink,
 }) => {
+  const isHover = useMediaQuery("(hover: hover)");
+
   return (
     <Grid
       item
@@ -79,7 +82,7 @@ const ProjectCard = ({
             size="large"
             onClick={() => window.open(gitLink)}
             initial={{ scale: 1 }}
-            whileHover={{ scale: 1.15 }}
+            whileHover={isHover ? { scale: 1.15 } : {}}
             whileTap={{ scale: 0.9 }}
           >
             <GitHub fontSize="inherit" />
@@ -90,7 +93,7 @@ const ProjectCard = ({
             size="large"
             onClick={() => window.open(webLink)}
             initial={{ scale: 1 }}
-            whileHover={{ scale: 1.15 }}
+            whileHover={isHover ? { scale: 1.15 } : {}}
             whileTap={{ scale: 0.9 }}
           >
             <LinkIcon fontSize="inherit" />

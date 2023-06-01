@@ -5,10 +5,13 @@ import {
   CardContent,
   List,
   ListItem,
+  useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
 
 const SkillsCard = ({ title, skills }) => {
+  const isHover = useMediaQuery("(hover: hover)");
+
   return (
     <Grid
       item
@@ -22,17 +25,20 @@ const SkillsCard = ({ title, skills }) => {
     >
       <Card
         component={motion.div}
-        initial={{ scale: 1 }}
-        whileHover={{ scale: 1.05 }}
+        initial={{ scale: 1, backgroundColor: "#323d49" }}
+        whileHover={
+          isHover
+            ? {
+                scale: 1.05,
+                backgroundColor: "#647dee",
+              }
+            : {}
+        }
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           height: "100%",
-          "&:hover": {
-            backgroundColor: "#647dee",
-            WebkitTransition: "background-color 0.3s linear",
-          },
         }}
       >
         <CardContent>

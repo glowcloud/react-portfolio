@@ -1,21 +1,33 @@
-import { Typography, Grid } from "@mui/material";
+import { Typography, Grid, useMediaQuery } from "@mui/material";
+import { motion } from "framer-motion";
 import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("lg"));
+
   return (
     <Grid
-      component="section"
       container
-      display="flex"
-      alignItems="stretch"
-      justifyContent="center"
-      my={5}
-      px={{ sm: 15, lg: 0 }}
-      spacing={2}
+      component={motion.section}
       id="skills"
+      px={{ sm: 15, lg: 0 }}
       sx={{
         scrollMarginTop: 90,
       }}
+      display="flex"
+      alignItems="stretch"
+      justifyContent="center"
+      spacing={2}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { delayChildren: 0.2, staggerChildren: 0.25 },
+        },
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: isSmallScreen ? 0.25 : 0.75 }}
     >
       <Grid item xs={12}>
         <Typography

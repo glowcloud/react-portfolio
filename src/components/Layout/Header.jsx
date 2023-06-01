@@ -7,6 +7,7 @@ import {
   Link,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
+import { motion } from "framer-motion";
 
 const Header = ({ navItems, setIsSidebarOpen }) => {
   return (
@@ -33,26 +34,33 @@ const Header = ({ navItems, setIsSidebarOpen }) => {
           sx={{ mr: 2, visibility: { xs: "hidden", md: "visible" } }}
         >
           {navItems.map((item) => (
-            <Typography
+            <Box
               key={item.text}
-              variant="h6"
-              component={Link}
-              href={item.href}
-              underline="hover"
+              component={motion.div}
+              initial={{ scale: 1 }}
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
               mx={2}
-              sx={{
-                color: "text.primary",
-                "&:hover": {
-                  color: "#7f53ac",
-                  backgroundImage:
-                    "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                },
-              }}
             >
-              {item.text}
-            </Typography>
+              <Typography
+                variant="h6"
+                component={Link}
+                href={item.href}
+                underline="hover"
+                sx={{
+                  color: "text.primary",
+                  "&:hover": {
+                    color: "#7f53ac",
+                    backgroundImage:
+                      "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  },
+                }}
+              >
+                {item.text}
+              </Typography>
+            </Box>
           ))}
         </Box>
       </Toolbar>

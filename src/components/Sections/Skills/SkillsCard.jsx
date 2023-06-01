@@ -6,11 +6,24 @@ import {
   List,
   ListItem,
 } from "@mui/material";
+import { motion } from "framer-motion";
 
 const SkillsCard = ({ title, skills }) => {
   return (
-    <Grid item xs={12} lg={4}>
+    <Grid
+      item
+      xs={12}
+      lg={4}
+      component={motion.div}
+      variants={{
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1 },
+      }}
+    >
       <Card
+        component={motion.div}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.05 }}
         sx={{
           display: "flex",
           flexDirection: "column",

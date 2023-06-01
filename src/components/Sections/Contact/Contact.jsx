@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Box, Typography, Snackbar, Alert } from "@mui/material";
+import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
@@ -18,17 +19,21 @@ const Contact = () => {
 
   return (
     <Box
-      component="section"
+      component={motion.section}
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      my={9}
+      my={20}
       mx={{ lg: 10 }}
       id="contact"
       sx={{
         scrollMarginTop: 105,
       }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.35 }}
+      transition={{ duration: 0.5 }}
     >
       <Typography
         gutterBottom

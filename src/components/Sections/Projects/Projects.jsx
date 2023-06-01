@@ -1,4 +1,5 @@
-import { Typography, Grid } from "@mui/material";
+import { Typography, Grid, useMediaQuery } from "@mui/material";
+import { motion } from "framer-motion";
 
 import project0Img from "../../../assets/project-0-elden-ring.png";
 import project1Img from "../../../assets/project-1-knight-tech.png";
@@ -7,20 +8,32 @@ import project3Img from "../../../assets/project-3-easy-polls.png";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("lg"));
+
   return (
     <Grid
-      component="section"
       container
+      component={motion.section}
+      id="projects"
+      px={{ sm: 15, lg: 0 }}
+      my={20}
+      sx={{
+        scrollMarginTop: 90,
+      }}
       display="flex"
       alignItems="stretch"
       justifyContent="center"
       spacing={2}
-      my={5}
-      px={{ sm: 15, lg: 0 }}
-      id="projects"
-      sx={{
-        scrollMarginTop: 90,
+      variants={{
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { delayChildren: 0.2, staggerChildren: 0.35 },
+        },
       }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: isSmallScreen ? 0.1 : 0.15 }}
     >
       <Grid item xs={12}>
         <Typography

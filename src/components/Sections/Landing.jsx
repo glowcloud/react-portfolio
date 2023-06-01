@@ -1,23 +1,30 @@
 import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import avatarImg from "../../assets/av-1.png";
 
 const Landing = () => {
   return (
     <Box
-      component="section"
+      component={motion.section}
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
       id="home"
-      py={2}
+      mt={{ xs: 5, sm: 3, xl: 5 }}
+      mb={{ xs: 28, sm: 5, xl: 10 }}
       sx={{
-        scrollMarginTop: 75,
+        scrollMarginTop: 95,
       }}
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
     >
       <Typography
         variant="h1"
         sx={{
+          px: { xs: 3, md: 0 },
           fontWeight: "500",
           color: "#7f53ac",
           backgroundImage: "linear-gradient(315deg, #7f53ac 0%, #647dee 74%)",

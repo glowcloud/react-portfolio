@@ -8,6 +8,7 @@ import {
   IconButton,
 } from "@mui/material";
 import { GitHub, Link as LinkIcon } from "@mui/icons-material";
+import { motion } from "framer-motion";
 
 const ProjectCard = ({
   title,
@@ -18,7 +19,17 @@ const ProjectCard = ({
   webLink,
 }) => {
   return (
-    <Grid item xs={12} lg={6} width="100%">
+    <Grid
+      item
+      xs={12}
+      lg={6}
+      width="100%"
+      component={motion.div}
+      variants={{
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, scale: 1 },
+      }}
+    >
       <Card
         sx={{
           display: "flex",
@@ -33,7 +44,6 @@ const ProjectCard = ({
           alt={`${title} Snapshot Image`}
           sx={{
             objectFit: "contain",
-            // height: "100%",
           }}
         />
         <CardContent
@@ -64,16 +74,24 @@ const ProjectCard = ({
           }}
         >
           <IconButton
+            component={motion.button}
             color="primary"
             size="large"
             onClick={() => window.open(gitLink)}
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.9 }}
           >
             <GitHub fontSize="inherit" />
           </IconButton>
           <IconButton
+            component={motion.button}
             color="primary"
             size="large"
             onClick={() => window.open(webLink)}
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.9 }}
           >
             <LinkIcon fontSize="inherit" />
           </IconButton>

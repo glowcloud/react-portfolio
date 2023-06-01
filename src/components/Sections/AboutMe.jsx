@@ -1,18 +1,23 @@
 import { Box, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
     <Box
-      component="section"
+      component={motion.section}
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      my={5}
+      mb={{xs: 23, sm: 20}}
       id="about"
       sx={{
-        scrollMarginTop: 90,
+        scrollMarginTop: 100,
       }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.75 }}
+      transition={{ duration: 0.5 }}
     >
       <Typography
         gutterBottom

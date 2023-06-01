@@ -31,6 +31,7 @@ const Footer = () => {
         component={Link}
         underline="none"
         href="https://chrome.google.com/webstore/detail/avatar-maker/ofknlbikfofijlcjkfcihomkedmchfbn"
+        target="_blank"
         sx={{
           mx: 1,
           color: "#7f53ac",

@@ -5,6 +5,7 @@ import project0Img from "../../../assets/project-0-elden-ring.png";
 import project1Img from "../../../assets/project-1-knight-tech.png";
 import project2Img from "../../../assets/project-2-photo-portfolio.png";
 import project3Img from "../../../assets/project-3-easy-polls.png";
+import project4Img from "../../../assets/project-4-flashcards.png";
 import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
@@ -93,6 +94,18 @@ const Projects = () => {
         image={project3Img}
         gitLink="https://github.com/glowcloud/polls-site"
         webLink="https://easy-polls.vercel.app"
+      />
+
+      {/* NEXTJS FLASHCARDS */}
+      <ProjectCard
+        title="Flashcards"
+        siteText="A website for creating decks of flashcards for your learning needs. 
+        Learn by reviewing or matching your cards."
+        toolsText="Created with Next.js and styled with CSS modules. 
+        Uses Firebase with Google Authentication."
+        image={project4Img}
+        gitLink="https://github.com/glowcloud/nextjs-flashcards"
+        webLink="https://easy-flashcards.vercel.app"
       />
     </Grid>
   );

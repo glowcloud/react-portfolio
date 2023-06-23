@@ -41,12 +41,12 @@ const Skills = () => {
 
       <SkillsCard
         title="Frontend"
-        skills={["HTML", "CSS", "JavaScript", "React", "MaterialUI"]}
+        skills={["HTML", "CSS", "JavaScript", "React", "Next.js", "MaterialUI"]}
       />
 
       <SkillsCard
         title="Backend"
-        skills={["Node", "Express", "MongoDB", "SQL"]}
+        skills={["Node.js", "Express", "MongoDB", "SQL", "Firebase"]}
       />
 
       <SkillsCard

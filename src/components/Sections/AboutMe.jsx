@@ -9,7 +9,7 @@ const AboutMe = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      mb={{xs: 23, sm: 20}}
+      mb={{ xs: 23, sm: 20 }}
       id="about"
       sx={{
         scrollMarginTop: 100,
@@ -27,7 +27,7 @@ const AboutMe = () => {
         About Me
       </Typography>
       <Typography gutterBottom fontSize={20} px={5} textAlign="center">
-        I'm a software developer with a Master's degree in Computer Engineering.
+        I am a frontend developer with a Master's degree in Computer Engineering.
         In my free time I enjoy playing video games, drawing and reading. I am
         fluent in Polish and English.
       </Typography>

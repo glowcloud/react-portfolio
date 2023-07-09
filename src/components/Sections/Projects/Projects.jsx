@@ -36,7 +36,15 @@ const Projects = () => {
       whileInView="visible"
       viewport={{ once: true, amount: isSmallScreen ? 0.1 : 0.15 }}
     >
-      <Grid item xs={12}>
+      <Grid
+        item
+        xs={12}
+        component={motion.div}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
         <Typography
           gutterBottom
           variant="h4"
@@ -51,8 +59,8 @@ const Projects = () => {
         title="Knight Tech Company Website"
         siteText="An example of a simple website for a company, showcasing
         information about its goals, founders, career possibilities,
-        reviews, FAQ and containing an example contact form."
-        toolsText="Created with React and Material UI."
+        reviews, FAQ, and containing an example contact form."
+        toolsText="Created with React, React Router, MUI and Framer Motion."
         image={project1Img}
         gitLink="https://github.com/glowcloud/company-site"
         webLink="https://company-site-two-alpha.vercel.app"
@@ -64,10 +72,24 @@ const Projects = () => {
         siteText="A simple photography portfolio website, containing photo
         galleries, photo viewer, information about the photographer and
         their services, and an example contact form."
-        toolsText="Created with React and Material UI."
+        toolsText="Built with React, React Router and MUI."
         image={project2Img}
         gitLink="https://github.com/glowcloud/photo-portfolio"
         webLink="https://photo-portfolio-mu.vercel.app"
+      />
+
+      {/* NEXTJS FLASHCARDS */}
+      <ProjectCard
+        title="Flashcards"
+        siteText="A website for creating decks of flashcards for your learning needs. 
+        Learn by reviewing or matching your cards."
+        toolsText="Created with Next.js and styled with CSS modules. 
+        React SimpleMDE Markdown Editor used for card content input
+        with remark for converting it into HTML for display. 
+        Uses Firebase for data storage with Google Authentication for user access."
+        image={project4Img}
+        gitLink="https://github.com/glowcloud/nextjs-flashcards"
+        webLink="https://easy-flashcards.vercel.app"
       />
 
       {/* ELDEN RING WEBSITE */}
@@ -76,8 +98,8 @@ const Projects = () => {
         siteText="A website collecting information about various Elden Ring items,
         bosses, locations, etc. Allows for crafting your own builds, along
         with choosing equipment for it."
-        toolsText="Created with React and Material UI. Uses an external API for game info and 
-        custom backend with MongoDB for user and builds data."
+        toolsText="Created with React, React Router and MUI. Uses an external API for game info and 
+        a custom backend, built with Express.js and MongoDB, for user and builds data."
         image={project0Img}
         gitLink="https://github.com/glowcloud/elden-ring-app"
         webLink="https://elden-ring-companion.vercel.app"
@@ -87,25 +109,13 @@ const Projects = () => {
       <ProjectCard
         title="Easy Polls"
         siteText="A website for creating and answering polls, and viewing their
-        results, with a simple signup and login (non-secure, to showcase
+        results, with a simple signup and login (non-secure, made to showcase
         different functionalities)."
-        toolsText="Created with React and Material UI. Uses Firebase for storing data
-        and Nivo for showcasing the results of polls as charts."
+        toolsText="Built with React, React Router and MUI. Uses Firebase for storing data
+        and Nivo for showcasing the results of polls as pie charts."
         image={project3Img}
         gitLink="https://github.com/glowcloud/polls-site"
         webLink="https://easy-polls.vercel.app"
-      />
-
-      {/* NEXTJS FLASHCARDS */}
-      <ProjectCard
-        title="Flashcards"
-        siteText="A website for creating decks of flashcards for your learning needs. 
-        Learn by reviewing or matching your cards."
-        toolsText="Created with Next.js and styled with CSS modules. 
-        Uses Firebase with Google Authentication."
-        image={project4Img}
-        gitLink="https://github.com/glowcloud/nextjs-flashcards"
-        webLink="https://easy-flashcards.vercel.app"
       />
     </Grid>
   );

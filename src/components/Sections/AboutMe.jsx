@@ -1,5 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
+import { LinkedIn, GitHub } from "@mui/icons-material";
 
 const AboutMe = () => {
   return (
@@ -27,10 +28,26 @@ const AboutMe = () => {
         About Me
       </Typography>
       <Typography gutterBottom fontSize={20} px={5} textAlign="center">
-        I am a frontend developer with a Master's degree in Computer Engineering.
-        In my free time I enjoy playing video games, drawing and reading. I am
-        fluent in Polish and English.
+        I am a frontend developer with a Master's degree in Computer
+        Engineering. In my free time I enjoy playing video games, drawing and
+        reading. I am fluent in Polish and English.
       </Typography>
+      <Box display="flex" justifyContent="center" alignItems="center" m={2}>
+        <IconButton
+          size="large"
+          color="primary"
+          onClick={() => window.open("https://www.linkedin.com/in/oliwiarogala")}
+        >
+          <LinkedIn fontSize="inherit" />
+        </IconButton>
+        <IconButton
+          size="large"
+          color="primary"
+          onClick={() => window.open("https://github.com/glowcloud")}
+        >
+          <GitHub fontSize="inherit" />
+        </IconButton>
+      </Box>
     </Box>
   );
 };
